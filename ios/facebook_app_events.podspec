@@ -18,5 +18,8 @@ Flutter plugin for Facebook Analytics and App Events
 
   # Do not specify PATCH version of FBSDKCoreKit. See README file for explanation
   # https://github.com/oddbit/flutter_facebook_app_events#dependencies-on-facebook-sdk
-  s.dependency 'FBSDKCoreKit', :git => 'https://github.com/pixery/facebook-ios-sdk.git'
+  s.dependency 'FBSDKCoreKit',
+  s.subspec 'FBSDKCoreKit' do |ss|
+    ss.source_files = 'FBSDKCoreKit/**/*.{swift}'
+  end
 end
